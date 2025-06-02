@@ -42,7 +42,7 @@ const options = {
 
 
 axios.defaults.withCredentials = true
-axios.defaults.baseURL = 'http://localhost:3001'
+axios.defaults.baseURL = 'https://api.marcimtl.ca'
 
 app.component('font-awesome-icon', FontAwesomeIcon)
 

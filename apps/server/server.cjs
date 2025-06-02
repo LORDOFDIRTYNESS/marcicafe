@@ -10,7 +10,7 @@ const router = require("express/lib/application.js");
 require('dotenv').config({ path: '.env.local', debug: true });
 
 const allowedOrigins = [
-    'https://marcicafe.onrender.com',
+    'https://marcimtl.ca',
     'http://localhost:5173'
 ];
 
