@@ -5,14 +5,13 @@ const session = require('express-session');
 const bodyParser = require('body-parser');
 const rateLimit = require('express-rate-limit');
 const fs = require('fs');
-const router = require("express/lib/application.js");
 
 require('dotenv').config({ path: '.env.local', debug: true });
 
 const allowedOrigins = [process.env.LOCAL_ORIGIN];
 
 const app = express();
-const PORT = 3001;
+const PORT = process.env.PORT || 3001;
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.json());
@@ -100,6 +99,37 @@ app.post('/api/mail', mailLimiter, async (req, res) => {
         res.status(500).json({ message: 'Failed to send email' });
     }
 });
+
+const path = require('path');
+
+console.log("WE GOOD ?")
+
+// Serve static files from Vue's build output
+app.use(express.static(path.join(__dirname, 'public')));
+
+console.log("WE GOOD ? -> SERVE STATIC FILES")
+
+// SPA fallback: send index.html for all unknown GET routes
+// app.get('*', (req, res, next) => {
+//     try {
+//         const filePath = path.join(__dirname, 'public', 'index.html');
+//         if (fs.existsSync(filePath)) {
+//             res.sendFile(filePath);
+//         } else {
+//             res.status(404).send('index.html not found');
+//         }
+//     } catch (err) {
+//         console.error('Fallback route error:', err);
+//         res.status(500).send('Internal Server Error');
+//     }
+// });
+// console.log("WE GOOD ? -> SPA FALLBACK")
+//
+// app._router.stack.forEach((r) => {
+//     if (r.route && r.route.path) {
+//         console.log('Route:', r.route.path);
+//     }
+// });
 
 app.listen(PORT, () => {
     console.log(`✅ Server running at http://localhost:${PORT}`);

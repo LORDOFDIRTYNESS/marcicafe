@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600&display=swap');
-@import "tailwindcss";
-@import "tailwindcss-primeui";
-@import "primeicons/primeicons.css";
+@import "../../../../node_modules/tailwindcss/dist/lib.d.mts";
+@import "../../../../node_modules/tailwindcss-primeui/v3/index.d.ts";
+@import "../../../../node_modules/primeicons/primeicons.css";
 
 body {
     color: #003a84;

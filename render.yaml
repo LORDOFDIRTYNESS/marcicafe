@@ -1,0 +1,29 @@
+﻿services:
+  - type: web
+    name: marci-client
+    env: node
+    buildCommand: cd client && npm install && npm run build
+    startCommand: cd client && npm run preview -- --port $PORT
+    envVars:
+      - key: NODE_VERSION
+        value: 20
+    staticPublishPath: client/dist
+
+  - type: web
+    name: marci-server
+    env: node
+    buildCommand: cd server && npm install
+    startCommand: cd server && npm start
+    envVars:
+      - key: NODE_VERSION
+        value: 20
+      - key: SMTP_HOST
+        value: smtp-relay.brevo.com
+      - key: SMTP_PORT
+        value: 587
+      - key: SMTP_USER
+        value: 8c3991001@smtp-brevo.com
+      - key: SMTP_PASS
+        value: BEjWTQ8hpMO37bL1
+      - key: LOCAL_ORIGIN
+        value: https://marci-client.onrender.com # or whatever your actual frontend URL is

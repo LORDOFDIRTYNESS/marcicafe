@@ -5,15 +5,15 @@
         @mouseenter="slideRight"
         @mouseleave="resetPosition"
     >
-      <a href="/musique" class="animate-slide-in-left">{{t('navigation.music')}}</a>
+      <a href="https://resy.com/cities/montreal-qc/venues/restaurant-marci" target="_blank" class="animate-slide-in-left">{{t('navigation.reservation')}}</a>
     </div>
     <hr class="w-3/4 border-t-4 mt-2 animate-slide-in border-primary-50">
   </div>
 
   <div class="mx-5 transition-transform duration-300 ease-in-out"
        :style="{ transform: isHovered ? 'translateX(20px)' : 'translateX(0)' }">
-    <img src="/src/assets/image/dj_marci_creme.svg"
-         class="animate-slide-in-bottom w-auto h-10 lg:h-14 min-h-10 min-w-10 lg:min-h-14 lg:min-w-14 my-2" alt="DJ MARCI"/>
+    <img src="/client/srcent/src/assets/icons/utensils.svg"
+         class="animate-slide-in-bottom w-auto min-h-10 min-w-9 my-2" alt="DJ MARCI"/>
   </div>
 </template>
 

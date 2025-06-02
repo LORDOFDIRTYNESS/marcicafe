@@ -60,7 +60,7 @@ vite-tailwindv4/
 │   └── App.vue            # Root component
 ├── public/                # Public static assets
 ├── index.html            # Entry HTML file
-└── vite.config.js        # Vite configuration
+└── vite.config.mjs        # Vite configuration
 ```
 
 ## Contributing

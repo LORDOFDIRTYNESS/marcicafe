@@ -1,7 +1,7 @@
 ﻿<template>
   <a href="/" class="flex items-center">
     <img
-        src = "/src/assets/icons/marci_creme.svg"
+        src = "/client/srcent/src/assets/icons/marci_creme.svg"
         alt="Logo"
         class="lg:h-14 mt-2 object-contain animate-slide-in-bottom"
         :class="isScrolledDown ? 'h-10' : 'h-12'"

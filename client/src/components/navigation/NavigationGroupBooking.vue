@@ -1,7 +1,7 @@
 ﻿<template>
   <div class="mx-5 transition-transform duration-300 ease-in-out"
        :style="{ transform: isHovered ? 'translateX(-20px)' : 'translateX(0)' }">
-    <img src="/src/assets/icons/wine-bottle.svg"
+    <img src="/client/srcent/src/assets/icons/wine-bottle.svg"
          class="animate-slide-in-bottom w-auto min-h-10 my-2" alt="DJ MARCI"/>
   </div>
 
