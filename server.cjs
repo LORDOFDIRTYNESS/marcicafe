@@ -9,7 +9,7 @@ const router = require("express/lib/application.js");
 
 require('dotenv').config({ path: '.env.local', debug: true });
 
-const allowedOrigins = ['http://localhost:5173', 'http://localhost:5174'];
+const allowedOrigins = [process.env.LOCAL_ORIGIN];
 
 const app = express();
 const PORT = 3001;
@@ -41,38 +41,58 @@ const mailLimiter = rateLimit({
 });
 
 const transporter = nodemailer.createTransport({
-    host: 'smtp-relay.brevo.com',
-    port: 587,
-    secure: false, // must be false for port 587
+    host: process.env.SMTP_HOST,
+    port: parseInt(process.env.SMTP_PORT),
+    secure: false,
     auth: {
-        user: '8c3991001@smtp-brevo.com',
-        pass: 'BEjWTQ8hpMO37bL1'
+        user: process.env.SMTP_USER,
+        pass: process.env.SMTP_PASS
     }
 });
 
-app.post('/api/mail', async (req, res) => {
-    const { firstName, lastName, email, phone, groupName, groupSize, date, tourType, details } = req.body;
+app.post('/api/mail', mailLimiter, async (req, res) => {
+    const {
+        firstName,
+        lastName,
+        email,
+        phone,
+        groupName,
+        groupSize,
+        date,
+        eventType,
+        selectedService,
+        selectedRoom,
+        selectedMenu,
+        allergies,
+        details
+    } = req.body;
 
     try {
         await transporter.sendMail({
             from: '"Marci Group Reservation Form" <simoncote.web@gmail.com>',
-            to: 'simoncote.web@gmail.com, david@elephant.global',
-            subject: `📩 Reservation Request from ${firstName} ${lastName}`,
+            to: 'simoncote.web@gmail.com',
+            subject: `📩 New Reservation from ${firstName} ${lastName}`,
             html: `
-      <div style="font-family: Arial, sans-serif; color: #333; line-height: 1.6;">
-        <h2 style="color: #6A2E35;">🎉 New Group Reservation</h2>
-        <p><strong>Name:</strong> ${firstName} ${lastName}</p>
-        <p><strong>Email:</strong> <a href="mailto:${email}">${email}</a></p>
-        <p><strong>Phone:</strong> ${phone}</p>
-        <p><strong>Group Name:</strong> ${groupName || '—'}</p>
-        <p><strong>Group Size:</strong> ${groupSize}</p>
-        <p><strong>Date:</strong> ${date}</p>
-        <p><strong>Event Type:</strong> ${tourType}</p>
-        <hr style="margin: 20px 0;">
-        <p><strong>Details:</strong></p>
-        <p style="white-space: pre-wrap;">${details || 'No additional details provided.'}</p>
-      </div>
-    `
+        <div style="font-family: Arial, sans-serif; color: #333; line-height: 1.6;">
+          <h2 style="color: #6A2E35;">🎉 Group Reservation</h2>
+          <p><strong>Name:</strong> ${firstName} ${lastName}</p>
+          <p><strong>Email:</strong> <a href="mailto:${email}">${email}</a></p>
+          <p><strong>Phone:</strong> ${phone}</p>
+          <p><strong>Group Name:</strong> ${groupName || '—'}</p>
+          <p><strong>Group Size:</strong> ${groupSize}</p>
+          <p><strong>Date:</strong> ${new Intl.DateTimeFormat('en-GB', { day: '2-digit', month: 'long', year: 'numeric' }).format(new Date(date))}</p>
+          <p><strong>Event Type:</strong> ${eventType}</p>
+          <p><strong>Selected Service:</strong> ${selectedService}</p>
+          <p><strong>Selected Room:</strong> ${selectedRoom}</p>
+          <p><strong>Selected Menu:</strong> ${selectedMenu}</p>
+          <p><strong>Allergies:</strong> ${
+                allergies?.length ? allergies.join(', ') : 'None'
+            }</p>
+          <hr style="margin: 20px 0;">
+          <p><strong>Details:</strong></p>
+          <p style="white-space: pre-wrap;">${details || 'No additional details provided.'}</p>
+        </div>
+      `,
         });
         res.status(200).json({ message: 'Email sent successfully' });
     } catch (err) {

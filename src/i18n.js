@@ -2,6 +2,102 @@
 
 const messages = {
     en: {
+        groupreservations: {
+            title: "Group Reservation Form",
+            intro:
+                "Thank you for your interest in a group reservation! Please read the important information below before filling out the form.",
+            capacityAndServices: {
+                title: "Capacity & Services",
+                content: {
+                    capacity: "There is a maximum capacity of 20 people for the private room and 25 people for the rooftop terrace.",
+                    terrace: "The terrace is heated, covered, and equipped with custom curtains.",
+                    services: "Two distinct seatings:",
+                    service1: "1st seating: 5:30 PM to 8:00 PM (table must be vacated by 8:00 PM)",
+                    service2: "2nd seating: 8:30 PM until closing (11:30 PM)",
+                    note: "Reservations for the terrace cannot be moved indoors."
+                }
+            },
+            menuAndPrices: {
+                title: "Menu and Prices",
+                description:
+                    "We offer a fixed 3-course menu composed of our classics (pizzas, seafood, salads, seasonal vegetables, meats, etc., depending on availability). There are 3 menu options to choose from, prices per person.",
+                person: "/ per person",
+                options: [
+                    {
+                        name: "Menu #1",
+                        prix: "50$",
+                        items:
+                            "Salads, buffarela, broccoli, meatballs, tomato and white sauce pizzas, desserts of the moment.",
+                    },
+                    {
+                        name: "Menu #2",
+                        prix: "60$",
+                        items:
+                            "Salads, squid, broccoli, pasta, tomato and white sauce pizzas, desserts of the moment.",
+                    },
+                    {
+                        name: "Menu #3",
+                        prix: "70$",
+                        items:
+                            "Oysters, crudo, shrimp (seafood platter), buffarela, meatballs, pasta, tomato and white sauce pizzas, desserts of the moment.",
+                    },
+                ],
+                note: {
+                    title: "Notes:",
+                    options: [
+                        "No menu modifications can be made less than 24 hours before the reservation.",
+                        "Food only, drinks not included.",
+                    ]
+                }
+            },
+            restrictionsAndConditions: {
+                title: "Restrictions and Important Conditions",
+                points: [
+                    "Our kitchen uses a lot of dairy and gluten. Gluten-free options are possible but very limited.",
+                    "No outside food or drinks allowed (including birthday cakes). Our homemade desserts are delicious!",
+                    "Children are not allowed in group reservations.",
+                    "Cancellations less than 12 hours in advance will incur full food charges for absentees. Please confirm your group as early as possible.",
+                    "Duplicate reservations will be canceled.",
+                    "Kitchen opens at 5:30 PM, last order at 10:15 PM.",
+                    "We do not accept terrace reservations outside the group framework.",
+                ],
+            },
+            formFields: {
+                allergiesLabel: "Please list any allergies",
+                addAllergy: "Add Allergy",
+                modalTitle: "Please enter an allergy",
+                modalPlaceholder: "Gluten, Nuts, etc ...",
+                cancel: "Cancel",
+                add: "Add",
+                enterAllergyPrompt: "Enter an allergy",
+                dateRequested: "Date requested *",
+                service: "Desired service",
+                room: "Desired room",
+                serviceOptions: [
+                    "1st Service (5:30 PM – 8:00 PM)",
+                    "2nd Service (8:30 PM – 11:30 PM)",
+                ],
+                groupSize: "Group size * (minimum 7)",
+                spacePreference: "Preferred space *",
+                spaceOptions: ["Private room", "Rooftop terrace", "No preference"],
+                menuChoice: "Menu choice *",
+                menuOptions: ["Option 1", "Option 2", "Option 3"],
+                allergies: "Allergies or dietary restrictions (please specify)",
+                fullName: "Full name of group leader *",
+                phone: "Phone number *",
+                email: "Email *",
+                additionalDetails: "Additional details (max 1000 characters)",
+                disclaimer: "I have read and accept the above conditions.",
+                submit: "Submit",
+            },
+            notes: {
+                confirmation:
+                    "Reservation is only confirmed after administrative validation.",
+                responseTime:
+                    "You will receive a response within 24 to 48 hours to confirm availability.",
+                thankYou: "Thank you — see you soon!",
+            }
+        },
         tagline: "Vinyls, wines & vibrations",
         footer: {
             title: "Marci",
@@ -42,7 +138,8 @@ const messages = {
             title: 'Reservation',
             form: 'GROUP RESERVATIONS',
             contact: 'Contact Information',
-            groupDetails: 'Group Details',
+            options : 'Service Options',
+            groupDetails : 'Group Information',
             firstName: 'First Name',
             lastName: 'Last Name',
             email: 'Email',
@@ -59,10 +156,7 @@ const messages = {
             groupBookingInfo: {
                 roomPreviewTitle: "Private Room for Group Bookings",
                 roomPreviewCaption: "Spacious and private – available for groups of 7 or more. Perfect for team outings, birthdays, and more.",
-                duration: "Reservations are for 2 hours (or 2 hours and 15 minutes for groups of 4 or more).",
-                seating: "Specific seating is not guaranteed — tables and bar seats are assigned based on group size and availability.",
-                cancellation: "Need to cancel within 3 hours of your booking? Please call us at (438) 380-9199.",
-                combiningTables: "We cannot combine tables to accommodate larger groups.",
+                schedule: "Two time slots are available: the first seating at 5:30 PM (the table must be vacated by 8:00 PM), or the second seating at 8:30 PM (until closing time).",
                 largeGroups: "For groups of at least 7 people , please email us — we have a cozy private room available ! ",
                 duplicateBookings: "Duplicate bookings will be canceled.",
                 glutenFree: "We offer some gluten-free options, but please note that our menu is small and limited.",
@@ -99,6 +193,101 @@ const messages = {
         }
     },
     fr: {
+        groupreservations:{
+            title: "Formulaire de réservation de groupe",
+            intro:
+                "Merci de votre intérêt pour une réservation de groupe ! Veuillez lire les informations importantes ci-dessous avant de compléter le formulaire.",
+            capacityAndServices: {
+                title: "Capacité & Services",
+                content: {
+                    capacity : "Il y a une capacité maximale de 20 personnes pour la salle privée et 25 personnes pour la terrasse sur le toit.",
+                    terrace: "La terrasse est chauffée, couverte, avec des rideaux sur mesure.",
+                    services: "Deux services distincts :",
+                    service1: "1er service : 17h30 à 20h00 (la table doit être libérée à 20h00)",
+                    service2: "2e service : 20h30 jusqu’à la fermeture (23h30)",
+                    note: "Les réservations pour la terrasse ne peuvent pas être déplacées à l’intérieur."
+                }
+            },
+            menuAndPrices: {
+                title: "Menu et Tarifs",
+                description:
+                    "Nous offrons un menu fixe en 3 services, composé de nos classiques (pizzas, fruits de mer, salades, légumes de saison, viandes, etc., selon arrivage). Il y a 3 options de menu au choix, prix par personne.",
+                person: "/ par personne",
+                options: [
+                    {
+                        name: "Menu #1",
+                        prix: "50$",
+                        items:
+                            "Salades, buffarela, brocoli, meatballs, pizzas sauce tomate et blanche, desserts du moment.",
+                    },
+                    {
+                        name: "Menu #2",
+                        prix: "60$",
+                        items:
+                            "Salades, calmars, brocoli, pâtes, pizzas sauce tomate et blanche, desserts du moment.",
+                    },
+                    {
+                        name: "Menu #3",
+                        prix: "70$",
+                        items:
+                            "Huîtres, crudo, crevettes (plateau de fruits de mer), buffarela, meatballs, pâtes, pizzas sauce tomate et blanche, desserts du moment.",
+                    },
+                ],
+                note: {
+                    title: "Notes:",
+                    options: [
+                        "Aucun changement de menu ne pourra être effectué moins de 24 heures avant la réservation.",
+                        "Nourriture seulement, boissons non incluses.",
+                    ]
+                }
+            },
+            restrictionsAndConditions: {
+                title: "Restrictions et conditions importantes",
+                points: [
+                    "Notre cuisine utilise beaucoup de produits laitiers et gluten. Options sans gluten possibles mais très limitées.",
+                    "Aucune nourriture ou boisson extérieure n’est permise (y compris gâteaux d’anniversaire). Nos desserts maison sont délicieux !",
+                    "Les enfants ne sont pas admis dans les réservations de groupe.",
+                    "Toute annulation de moins de 12h entraîne une facturation complète de la nourriture pour les absents. Merci de confirmer votre groupe le plus tôt possible.",
+                    "Les réservations en double seront annulées.",
+                    "La cuisine ouvre à 17h30, dernière commande à 22h15.",
+                    "Nous ne prenons pas de réservations pour la terrasse en dehors du cadre groupe.",
+                ],
+            },
+            formFields: {
+                allergiesLabel: "Veuillez indiquer vos allergies",
+                addAllergy: "Ajouter une allergie",
+                modalTitle: "Veuillez saisir une allergie",
+                modalPlaceholder: "Gluten, Noix, etc ...",
+                cancel: "Annuler",
+                add: "Ajouter",
+                dateRequested: "Date demandée *",
+                service: "Service souhaité",
+                room: "Salle souhaitée",
+                serviceOptions: [
+                    "1er service (17h30 – 20h00)",
+                    "2e service (20h30 – 23h30)",
+                ],
+                groupSize: "Taille du groupe * (minimum 7)",
+                spacePreference: "Espace souhaité *",
+                spaceOptions: ["Salle privée", "Terrasse sur le toit","Aucune préférence"],
+                menuChoice: "Choix du menu *",
+                menuOptions: ["Option 1", "Option 2", "Option 3"],
+                allergies: "Allergies ou restrictions alimentaires (merci de préciser)",
+                fullName: "Nom complet du responsable *",
+                phone: "Numéro de téléphone *",
+                email: "Email *",
+                additionalDetails: "Détails supplémentaires (1000 caractères max)",
+                disclaimer: "J'ai lu et j'accepte les conditions mentionnées ci-dessus.",
+                submit: "Soumettre",
+            },
+            notes: {
+                confirmation:
+                    "La réservation ne sera confirmée qu’après validation par l’administration.",
+                responseTime:
+                    "Vous recevrez une réponse sous 24 à 48 heures pour confirmer la disponibilité.",
+                thankYou: "Merci — à très bientôt !",
+            }
+        },
         tagline: "Vinyles, vins & vibrations",
         footer: {
             title: "Marci",
@@ -138,8 +327,9 @@ const messages = {
         reservation: {
             title: 'Réservation',
             form: 'RÉSERVATIONS DE GROUPE',
-            contact : 'Informations de contact',
-            groupDetails : 'Détails du groupe',
+            contact: 'Information de Contact',
+            options : 'Options de Service',
+            groupDetails : 'Information de Groupe',
             firstName: 'Prénom',
             lastName: 'Nom',
             email: 'Email',
@@ -156,10 +346,7 @@ const messages = {
             groupBookingInfo: {
                 roomPreviewTitle: "Salle privée pour les réservations de groupe",
                 roomPreviewCaption: "Spacieuse et intime – disponible pour les groupes de 7 personnes ou plus. Parfaite pour les sorties d’équipe, les anniversaires, et plus encore.",
-                duration: "Les réservations sont pour une durée de 2 heures (ou 2 h 15 pour les groupes de 4 personnes ou plus).",
-                seating: "Nous ne pouvons pas garantir un emplacement spécifique — les tables et les places au bar sont attribuées selon la taille du groupe et la disponibilité.",
-                cancellation: "Besoin d’annuler moins de 3 heures à l’avance? Veuillez nous appeler au (438) 380-9199.",
-                combiningTables: "Nous ne pouvons pas combiner de tables pour accueillir de plus grands groupes.",
+                schedule: "Deux créneaux horaires s'offrent à vous, le premier service à 17:30 ( la table doit être libéré à 20:00) ou le deuxième service 20:30 ( jusqu'à la fermeture ).",
                 largeGroups: "Pour les groupes d'au moins 7 personnes, veuillez nous écrire — nous avons une salle privée chaleureuse !",
                 duplicateBookings: "Les réservations en double seront annulées.",
                 glutenFree: "Nous offrons quelques options sans gluten, mais notre menu est petit et limité.",

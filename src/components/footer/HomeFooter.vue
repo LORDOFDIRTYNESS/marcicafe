@@ -58,7 +58,6 @@
 <script setup>
 import { ref, onMounted, onUnmounted } from "vue";
 import {useI18n} from "vue-i18n";
-// import backgroundImage from '../../assets/image/background.png';
 
 const { t } = useI18n();
 
