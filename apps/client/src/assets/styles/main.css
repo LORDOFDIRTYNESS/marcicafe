@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600&display=swap');
+@import "tailwindcss";
+@import "tailwindcss-primeui";
+@import "primeicons/primeicons.css";
+
+body {
+    color: #003a84;
+    font-family: 'Limelight', sans-serif;
+}
+
+@layer utilities {
+    .font-work {
+        font-family: 'Work Sans', sans-serif;
+    }
+}
+
+@keyframes slide-in-bottom {
+    from {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-slide-in-bottom {
+    animation: slide-in-bottom 0.7s ease-out forwards;
+}
+
+/* Slide-in from the left animation for the text and SVG */
+@keyframes slide-in-left {
+    from {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.animate-slide-in-left {
+    animation: slide-in-left 0.7s ease-out forwards;
+}
+
+/* Slide-in from the left animation for the text and SVG */
+@keyframes slide-in-right {
+    from {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.animate-slide-in-right {
+    animation: slide-in-right 0.7s ease-out forwards;
+}
+
+/* Slide-in animation for the divider */
+@keyframes slide-in {
+    from {
+        width: 0;
+    }
+    to {
+        width: 75%;
+    }
+}
+
+.animate-slide-in {
+    animation: slide-in 0.7s ease-out;
+    animation-fill-mode: forwards;
+    width: 0; /* Initial width for the animation */
+}
+
+
+/*Infinite flip animation for the icon*/
+@keyframes flip-infinite {
+    0% {
+        transform: rotateY(0deg); /* Starting position */
+    }
+    50% {
+        transform: rotateY(180deg); /* Half flip */
+    }
+    100% {
+        transform: rotateY(360deg); /* Full flip */
+    }
+}
+
+.icon-flip {
+    transition: transform 0.1s ease;
+}
+
+.icon-flip:hover {
+    animation: flip-infinite 1s infinite linear; /* Flip infinitely on hover */
+}
+
+.icon-flip-infinite {
+    animation: flip-infinite 1s infinite linear;
+}
+
+.text-shadow {
+    text-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5); /* Adds a shadow */
+}
+
+.text-shadow-light {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Adds a shadow */
+}
+
+.shadow-box {
+    box-shadow:
+            0 -10px 10px -10px rgba(0, 0, 0, 0.4), /* top shadow */
+            0 10px 10px -10px rgba(0, 0, 0, 0.4);   /* bottom shadow */
+}
+
+
+
