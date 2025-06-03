@@ -11,6 +11,7 @@ require('dotenv').config({ path: '.env.local', debug: true });
 
 const allowedOrigins = [
     'https://marcimtl.ca',
+    'https://www.marcimtl.ca',
     'http://localhost:5173'
 ];
 
