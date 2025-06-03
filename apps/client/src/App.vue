@@ -4,6 +4,15 @@ import NavigationMobile from "./components/navigation/NavigationMobile.vue";
 import ScrollToTop from "./components/common/ScrollToTop.vue";
 import I18Button from "./components/common/I18Button.vue";
 
+import { onMounted } from "vue";
+import { useI18n } from "vue-i18n";
+
+onMounted(() => {
+  const savedLocale = localStorage.getItem('user-locale')
+  const { locale } = useI18n({ useScope: 'global' })
+  if (savedLocale) locale.value = savedLocale
+})
+
 </script>
 
 <template>

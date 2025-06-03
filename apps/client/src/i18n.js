@@ -384,16 +384,11 @@ const messages = {
     }
 };
 
-
-const savedLocale = typeof window !== 'undefined' ? localStorage.getItem('locale') || 'fr' : 'fr';
-
 const i18n = createI18n({
     legacy: false,
-    locale: savedLocale,
+    locale: 'en',
     fallbackLocale: 'en',
     messages,
 });
-
-console.log('i18n locale:', i18n.global.locale.value);
 
 export default i18n;
