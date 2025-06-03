@@ -106,14 +106,6 @@ app.post('/api/mail', mailLimiter, async (req, res) => {
     }
 });
 
-// Serve static files
-app.use(express.static(path.join(__dirname, '../client/dist')));
-
-// SPA fallback: always serve index.html for unknown routes
-app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, '../client/dist/index.html'));
-});
-
 app.listen(PORT, () => {
     console.log(`✅ Server running at ${PORT}`);
 });
