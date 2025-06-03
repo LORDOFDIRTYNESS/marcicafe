@@ -3,7 +3,7 @@ import { useRouter } from 'vue-router';
 import {ref, onMounted, onUnmounted, computed} from 'vue';
 import { useI18n } from 'vue-i18n';
 
-const { t } = useI18n();
+const { t } = useI18n({ useScope: 'global' });
 const router = useRouter();
 
 const title = computed(() => t('djSection.title'));
@@ -92,7 +92,11 @@ const globalCharIndex = (wordIndex, charIndex) => {
           :class="{ 'animate-slide-in-right': isVisible }"
           :style="{ opacity: isVisible ? 1 : 0 }"
       >
-        {{ t('djSection.body') }}
+        {{ $t('djSection.body') }}
+        {{ $t('djSection.body') }}
+        {{ $t('djSection.body') }}
+        {{ $t('djSection.body') }}
+        {{ $t('djSection.body') }}
         <a href="https://wafaudio.com/" target="_blank" rel="noopener noreferrer" class="underline text-primary-900">
           Waves and Frequencies
         </a>.
