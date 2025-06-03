@@ -394,8 +394,6 @@ const i18n = createI18n({
     messages,
 });
 
-console.log(t('footer.tagline'))
-
 console.log('i18n locale:', i18n.global.locale.value);
 
 export default i18n;
