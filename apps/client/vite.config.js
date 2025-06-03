@@ -5,6 +5,8 @@ import Components from 'unplugin-vue-components/vite';
 import { PrimeVueResolver } from '@primevue/auto-import-resolver';
 
 export default defineConfig({
+  base: '/', // important for SPA on Render
+  publicDir: 'public', // make sure Vite copies this during build
   plugins: [
     vue(),
     tailwindcss(),
@@ -14,8 +16,12 @@ export default defineConfig({
       ]
     })
   ],
-  optimizeDeps:{
+  optimizeDeps: {
     include: ['vue-i18n']
+  },
+  build: {
+    outDir: 'dist',
+    assetsDir: 'assets'
   },
   server: {
     host: process.env.HOST,
