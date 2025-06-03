@@ -391,7 +391,7 @@ const savedLocale = typeof window !== 'undefined' ? localStorage.getItem('locale
 
 const i18n = createI18n({
     legacy: false, // Use Composition API mode
-    locale: savedLocale, // Set the initial locale
+    locale: 'en', // Set the initial locale
     fallbackLocale: 'en', // Fallback locale
     messages,
 });
