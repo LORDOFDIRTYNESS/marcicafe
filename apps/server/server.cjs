@@ -6,6 +6,7 @@ const bodyParser = require('body-parser');
 const rateLimit = require('express-rate-limit');
 const fs = require('fs');
 const router = require("express/lib/application.js");
+const path = require('path');
 
 require('dotenv').config({ path: '.env.local', debug: true });
 
@@ -103,6 +104,14 @@ app.post('/api/mail', mailLimiter, async (req, res) => {
         console.error('Email error:', err);
         res.status(500).json({ message: 'Failed to send email' });
     }
+});
+
+// Serve static files
+app.use(express.static(path.join(__dirname, '../frontend/dist')));
+
+// SPA fallback: always serve index.html for unknown routes
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, '../frontend/dist/index.html'));
 });
 
 app.listen(PORT, () => {
