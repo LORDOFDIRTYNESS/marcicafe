@@ -8,7 +8,7 @@ import { onMounted } from "vue";
 import { useI18n } from "vue-i18n";
 
 onMounted(() => {
-  const savedLocale = localStorage.getItem('user-locale')
+  const savedLocale = localStorage.getItem('user-locales')
   const { locale } = useI18n({ useScope: 'global' })
   if (savedLocale) locale.value = savedLocale
 })

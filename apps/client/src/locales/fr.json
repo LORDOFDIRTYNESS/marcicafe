@@ -1,0 +1,191 @@
+﻿{
+  "groupreservations": {
+    "title": "Formulaire de réservation de groupe",
+    "intro": "Merci de votre intérêt pour une réservation de groupe ! Veuillez lire les informations importantes ci-dessous avant de compléter le formulaire.",
+    "capacityAndServices": {
+      "title": "Capacité & Services",
+      "content": {
+        "capacity": "Il y a une capacité maximale de 20 personnes pour la salle privée et 25 personnes pour la terrasse sur le toit.",
+        "terrace": "La terrasse est chauffée, couverte, avec des rideaux sur mesure.",
+        "services": "Deux services distincts :",
+        "service1": "1er service : 17h30 à 20h00 (la table doit être libérée à 20h00)",
+        "service2": "2e service : 20h30 jusqu’à la fermeture (23h30)",
+        "note": "Les réservations pour la terrasse ne peuvent pas être déplacées à l’intérieur."
+      }
+    },
+    "menuAndPrices": {
+      "title": "Menu et Tarifs",
+      "description": "Nous offrons un menu fixe en 3 services, composé de nos classiques (pizzas, fruits de mer, salades, légumes de saison, viandes, etc., selon arrivage). Il y a 3 options de menu au choix, prix par personne.",
+      "person": "/ par personne",
+      "options": [
+        {
+          "name": "Menu #1",
+          "prix": "50$",
+          "items": "Salades, buffarela, brocoli, meatballs, pizzas sauce tomate et blanche, desserts du moment."
+        },
+        {
+          "name": "Menu #2",
+          "prix": "60$",
+          "items": "Salades, calmars, brocoli, pâtes, pizzas sauce tomate et blanche, desserts du moment."
+        },
+        {
+          "name": "Menu #3",
+          "prix": "70$",
+          "items": "Huîtres, crudo, crevettes (plateau de fruits de mer), buffarela, meatballs, pâtes, pizzas sauce tomate et blanche, desserts du moment."
+        }
+      ],
+      "note": {
+        "title": "Notes:",
+        "options": [
+          "Aucun changement de menu ne pourra être effectué moins de 24 heures avant la réservation.",
+          "Nourriture seulement, boissons non incluses."
+        ]
+      }
+    },
+    "restrictionsAndConditions": {
+      "title": "Restrictions et conditions importantes",
+      "points": [
+        "Notre cuisine utilise beaucoup de produits laitiers et gluten. Options sans gluten possibles mais très limitées.",
+        "Aucune nourriture ou boisson extérieure n’est permise (y compris gâteaux d’anniversaire). Nos desserts maison sont délicieux !",
+        "Les enfants ne sont pas admis dans les réservations de groupe.",
+        "Toute annulation de moins de 12h entraîne une facturation complète de la nourriture pour les absents. Merci de confirmer votre groupe le plus tôt possible.",
+        "Les réservations en double seront annulées.",
+        "La cuisine ouvre à 17h30, dernière commande à 22h15.",
+        "Nous ne prenons pas de réservations pour la terrasse en dehors du cadre groupe."
+      ]
+    },
+    "formFields": {
+      "allergiesLabel": "Veuillez indiquer vos allergies",
+      "addAllergy": "Ajouter une allergie",
+      "modalTitle": "Veuillez saisir une allergie",
+      "modalPlaceholder": "Gluten, Noix, etc ...",
+      "cancel": "Annuler",
+      "add": "Ajouter",
+      "dateRequested": "Date demandée *",
+      "service": "Service souhaité",
+      "room": "Salle souhaitée",
+      "serviceOptions": [
+        "1er service (17h30 – 20h00)",
+        "2e service (20h30 – 23h30)"
+      ],
+      "groupSize": "Taille du groupe * (minimum 7)",
+      "spacePreference": "Espace souhaité *",
+      "spaceOptions": [
+        "Salle privée",
+        "Terrasse sur le toit",
+        "Aucune préférence"
+      ],
+      "menuChoice": "Choix du menu *",
+      "menuOptions": [
+        "Option 1",
+        "Option 2",
+        "Option 3"
+      ],
+      "allergies": "Allergies ou restrictions alimentaires (merci de préciser)",
+      "fullName": "Nom complet du responsable *",
+      "phone": "Numéro de téléphone *",
+      "email": "Email *",
+      "additionalDetails": "Détails supplémentaires (1000 caractères max)",
+      "disclaimer": "J'ai lu et j'accepte les conditions mentionnées ci-dessus.",
+      "submit": "Soumettre"
+    },
+    "notes": {
+      "confirmation": "La réservation ne sera confirmée qu’après validation par l’administration.",
+      "responseTime": "Vous recevrez une réponse sous 24 à 48 heures pour confirmer la disponibilité.",
+      "thankYou": "Merci — à très bientôt !"
+    }
+  },
+  "tagline": "Vinyles, vins & vibrations",
+  "footer": {
+    "title": "Marci",
+    "tagline": "Club social italo-américain",
+    "location": "Plaza St-Hubert, Montréal",
+    "djs": "DJ sets : vendredi et samedi",
+    "serial": "No. MTL6600",
+    "follow": "Suivez-nous"
+  },
+  "djSection": {
+    "title": "Le Son du Week-end",
+    "headline": "Chaque fin de semaine, Marci se transforme.",
+    "body": "Nos DJ résident·e·s et invité·e·s font vibrer la salle avec des sets soigneusement sélectionnés sur un système audio haut de gamme conçu par ",
+    "instagram": "Visitez notre instagram pour plus d'info!",
+    "vibe": "Le jour s'efface, le vin s'invite, et les platines dessinent la soirée.",
+    "schedule": "DJ sets tous les vendredis et samedis — à partir de 19h."
+  },
+  "toasts": {
+    "success": "Réservation envoyée avec succès !",
+    "error_fields": "Veuillez corriger les erreurs dans le formulaire.",
+    "error_message": "Erreur lors de l’envoi de la réservation. Veuillez réessayer plus tard.",
+    "error_checkbox": "Veuillez accepter les conditions."
+  },
+  "trademark": "© 2025 fait par Marci.",
+  "callToAction": {
+    "description": "Restaurant chaleureux de Montréal qui offre une cuisine réconfortante avec un penchant italo-américain, des vins de choix et une ambiance nostalgique. Fièrement situé sur la Plaza St-Hubert, facile d'accès et accueillant pour tous.",
+    "button_reserve": "Je réserve",
+    "button_group": "Groupe",
+    "button_dj": "Voir DJs"
+  },
+  "navigation": {
+    "home": "Accueil",
+    "music": "Musique",
+    "reservation": "Réservation",
+    "group": "Groupe"
+  },
+  "reservation": {
+    "title": "Réservation",
+    "form": "RÉSERVATIONS DE GROUPE",
+    "contact": "Information de Contact",
+    "options": "Options de Service",
+    "groupDetails": "Information de Groupe",
+    "firstName": "Prénom",
+    "lastName": "Nom",
+    "email": "Email",
+    "phone": "Téléphone",
+    "group": "Nom du groupe",
+    "guests": "Nombre de personnes",
+    "date": "Date de réservation",
+    "event": "Type d'événement",
+    "selectEventType": "Sélectionnez un type d'événement",
+    "details": "Détails supplémentaires",
+    "remaining": "caractères restants",
+    "submit": "Soumettre",
+    "groupBookingInfoTitle": "Veuillez Noter",
+    "groupBookingInfo": {
+      "roomPreviewTitle": "Salle privée pour les réservations de groupe",
+      "roomPreviewCaption": "Spacieuse et intime – disponible pour les groupes de 7 personnes ou plus. Parfaite pour les sorties d’équipe, les anniversaires, et plus encore.",
+      "schedule": "Deux créneaux horaires s'offrent à vous, le premier service à 17:30 ( la table doit être libéré à 20:00) ou le deuxième service 20:30 ( jusqu'à la fermeture ).",
+      "largeGroups": "Pour les groupes d'au moins 7 personnes, veuillez nous écrire — nous avons une salle privée chaleureuse !",
+      "duplicateBookings": "Les réservations en double seront annulées.",
+      "glutenFree": "Nous offrons quelques options sans gluten, mais notre menu est petit et limité.",
+      "outsideFood": "Aucune nourriture ou boisson extérieure n’est permise — y compris les gâteaux (nos desserts maison sont délicieux!).",
+      "kitchenHours": "La cuisine ouvre à 17 h 30 et la dernière commande est à 22 h 15.",
+      "terrace": "Nous ne prenons pas de réservations pour la terrasse.",
+      "closing": "Merci — à très bientôt!",
+      "read": "J'ai lu et j'accepte les conditions."
+    },
+    "eventTypes": {
+      "birthday": "Anniversaire",
+      "anniversary": "Anniversaire de mariage",
+      "engagement": "Fiançailles",
+      "baby_shower": "Fête prénatale",
+      "graduation": "Remise des diplômes",
+      "corporate": "Événement d'entreprise",
+      "reunion": "Réunion",
+      "holiday": "Fête de fin d'année",
+      "farewell": "Fête d'adieu",
+      "other": "Autre"
+    },
+    "contactFields": {
+      "firstName": "Prénom",
+      "lastName": "Nom",
+      "email": "Email",
+      "phone": "Téléphone"
+    },
+    "error": {
+      "required": "Ce champ est requis.",
+      "email": "Entrez une adresse courriel valide.",
+      "minimum": "Minimum 7 personnes.",
+      "maximum": "Maximum 1000 caractères autorisés."
+    }
+  }
+}

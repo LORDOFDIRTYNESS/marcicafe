@@ -47,7 +47,7 @@ defineProps({
   }
 })
 
-/* computed navigation → recomputed whenever `locale` changes */
+/* computed navigation → recomputed whenever `locales` changes */
 const navigation = computed(() => [
   { name: t('navigation.home'),        href: '/' },
   { name: t('navigation.group'),       href: '/reservation' },

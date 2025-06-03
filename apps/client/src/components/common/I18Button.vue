@@ -34,7 +34,7 @@ locale.value = savedLocale
 // Sync toggle with language
 const isFrench = ref(locale.value === 'fr')
 
-// Update i18n locale on switch and save to localStorage
+// Update i18n locales on switch and save to localStorage
 function switchLanguage(value) {
   locale.value = value ? 'fr' : 'en'
   localStorage.setItem('locale', locale.value)

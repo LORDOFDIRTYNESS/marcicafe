@@ -38,7 +38,7 @@
         "tailwindcss-primeui": "^0.5.0",
         "v-calendar": "^3.1.2",
         "vue": "^3.4.27",
-        "vue-i18n": "^12.0.0-alpha.2",
+        "vue-i18n": "^9.14.2",
         "vue-router": "^4.0.13",
         "vue-toastification": "^2.0.0-rc.5"
     },
@@ -57,13 +57,13 @@
     "main": "vite.config.js",
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/simon-c-dev/cafe-marci.git"
+        "url": "git+https://github.com/LORDOFDIRTYNESS/marcicafe.git"
     },
     "keywords": [],
     "author": "",
     "license": "ISC",
     "bugs": {
-        "url": "https://github.com/simon-c-dev/cafe-marci/issues"
+        "url": "https://github.com/LORDOFDIRTYNESS/marcicafe/issues"
     },
-    "homepage": "https://github.com/simon-c-dev/cafe-marci#readme"
+    "homepage": "https://github.com/LORDOFDIRTYNESS/marcicafe#readme"
 }
