@@ -75,7 +75,7 @@ app.post('/api/mail', mailLimiter, async (req, res) => {
     try {
         await transporter.sendMail({
             from: '"Marci Group Reservation Form" <simoncote.web@gmail.com>',
-            to: 'simoncote.web@gmail.com',
+            to: 'info@marcimtl.com',
             subject: `📩 New Reservation from ${firstName} ${lastName}`,
             html: `
         <div style="font-family: Arial, sans-serif; color: #333; line-height: 1.6;">
