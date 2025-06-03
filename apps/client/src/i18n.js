@@ -396,4 +396,6 @@ const i18n = createI18n({
     messages,
 });
 
+console.log(i18n.global.locale);
+
 export default i18n;
