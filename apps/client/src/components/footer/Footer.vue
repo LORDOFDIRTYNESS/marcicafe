@@ -89,4 +89,7 @@ const { t } = useI18n();
 const socialMediaLinks = [
   { name: "Instagram", url: "https://www.instagram.com/marcisurlaplaza", icon: ["fab", "instagram"] }
 ];
+
+console.log(t('footer.tagline'))          // Should print string or fallback key
+console.log(useI18n().messages)
 </script>
