@@ -1,5 +1,5 @@
 ﻿<template>
-  <div class="mx-auto max-w-4xl pt-20 text-center">
+  <div class="mx-auto max-w-4xl pt-10 lg:pt-20 text-center">
     <!-- Animated Title -->
     <h1
         :key="title"

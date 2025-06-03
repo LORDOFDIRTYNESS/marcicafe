@@ -92,11 +92,7 @@ const globalCharIndex = (wordIndex, charIndex) => {
           :class="{ 'animate-slide-in-right': isVisible }"
           :style="{ opacity: isVisible ? 1 : 0 }"
       >
-        {{ $t('djSection.body') }}
-        {{ $t('djSection.body') }}
-        {{ $t('djSection.body') }}
-        {{ $t('djSection.body') }}
-        {{ $t('djSection.body') }}
+        {{ t('djSection.body') }}
         <a href="https://wafaudio.com/" target="_blank" rel="noopener noreferrer" class="underline text-primary-900">
           Waves and Frequencies
         </a>.

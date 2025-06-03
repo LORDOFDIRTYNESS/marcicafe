@@ -1,5 +1,5 @@
 ﻿<template>
-  <div class="dj-card mt-8 mb-14 mx-2 md:mx-auto rounded-xl border-double border-8 border-primary-900 p-4 sm:p-6
+  <div class="dj-card mt-8 mb-6 lg:mb-14 mx-2 md:mx-auto rounded-xl border-double border-8 border-primary-900 p-4 sm:p-6
   max-w-4xl text-primary relative shadow-xl">
     <GroupBookingHeadline />
 

@@ -47,7 +47,7 @@ function selectMenu(value) {
 
 <template>
   <div>
-    <h3 class="text-lg md:text-xl lg:text-2xl xl:text-3xl font-semibold text-primary-500">{{ t('reservation.groupDetails') }}</h3>
+    <h3 class="text-lg md:text-xl lg:text-2xl xl:text-3xl font-semibold text-primary-500">{{ t('reservation.options') }}</h3>
     <label class="my-5 block text-sm lg:text-md xl:text-lg font-medium text-gray-700">{{ t('groupreservations.menuAndPrices.title') }} *</label>
     <div class="grid grid-cols-1 md:grid-cols-3 gap-y-4 gap-x-8">
       <div
