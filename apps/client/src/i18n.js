@@ -384,15 +384,10 @@ const messages = {
     }
 };
 
-// Retrieve the saved language from localStorage or default to 'fr'
-const getSavedLocale = () => {
-    if (typeof window !== 'undefined' && window.localStorage) {
-        return localStorage.getItem('locale') || 'fr';
-    }
-    return 'fr'; // default fallback during SSR
-};
 
-const savedLocale = getSavedLocale();
+const savedLocale = typeof window !== 'undefined' ? localStorage.getItem('locale') || 'fr' : 'fr';
+
+
 
 const i18n = createI18n({
     legacy: false, // Use Composition API mode
