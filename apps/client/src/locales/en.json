@@ -156,6 +156,11 @@
       "closing": "Thank you — see you soon!",
       "read": "I have read and I accept the terms."
     },
+    "groupBookingReservation":{
+        "title": "Reservation Confirmation",
+        "description": "Once your request has been submitted, the reservation will not be confirmed until a member of our team follows up with you. We will contact you to review the details and officially confirm the reservation.",
+        "note": "Please note that this is a request and not a confirmed reservation."
+    },
     "eventTypes": {
       "birthday": "Birthday",
       "anniversary": "Anniversary",

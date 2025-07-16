@@ -163,6 +163,11 @@
       "closing": "Merci — à très bientôt!",
       "read": "J'ai lu et j'accepte les conditions."
     },
+    "groupBookingReservation": {
+      "title": "Confirmation de la Réservation",
+      "description": "Une fois votre demande envoyée, la réservation ne sera confirmée qu’après un suivi de notre part. Un membre de notre équipe communiquera avec vous pour valider les détails et confirmer officiellement la réservation.",
+      "note": "Veuillez noter qu’il s’agit d’une demande et non d’une réservation confirmée."
+    },
     "eventTypes": {
       "birthday": "Anniversaire",
       "anniversary": "Anniversaire de mariage",
