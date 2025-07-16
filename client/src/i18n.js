@@ -166,6 +166,11 @@ const messages = {
                 closing: "Thank you — see you soon!",
                 read: "I have read and I accept the terms."
             },
+            groupBookingReservation: {
+                title: "Reservation Confirmation",
+                description: "Once your request has been submitted, the reservation will not be confirmed until a member of our team follows up with you. We will contact you to review the details and officially confirm the reservation.",
+                note: "Please note that this is a request and not a confirmed reservation."
+            },
             contactFields:{
                 firstName: 'First name',
                 lastName: 'Last name',
@@ -355,6 +360,11 @@ const messages = {
                 terrace: "Nous ne prenons pas de réservations pour la terrasse.",
                 closing: "Merci — à très bientôt!",
                 read: "J'ai lu et j'accepte les conditions."
+            },
+            groupBookingReservation: {
+                title: "Confirmation de la Réservation",
+                description: "Une fois votre demande envoyée, la réservation ne sera confirmée qu’après un suivi de notre part. Un membre de notre équipe communiquera avec vous pour valider les détails et confirmer officiellement la réservation.",
+                note: "Veuillez noter qu’il s’agit d’une demande et non d’une réservation confirmée."
             },
             eventTypes: {
                 birthday: "Anniversaire",

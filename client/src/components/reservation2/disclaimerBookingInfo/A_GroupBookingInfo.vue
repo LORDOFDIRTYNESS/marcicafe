@@ -7,6 +7,7 @@
       <CapacityAndServices />
       <MenuAndPrices />
       <RestrictionsAndConditions />
+      <Confirmation />
     </div>
 
     <GroupBookingAcknowledgement v-model="isChecked" />
@@ -22,6 +23,7 @@ import CapacityAndServices from './CapacityAndServices.vue'
 import MenuAndPrices from './MenuAndPrices.vue'
 import RestrictionsAndConditions from './RestrictionsAndConditions.vue'
 import GroupBookingAcknowledgement from './GroupBookingAcknowledgement.vue'
+import Confirmation from "./Confirmation.vue";
 
 const { t } = useI18n();
 
