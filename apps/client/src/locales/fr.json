@@ -5,7 +5,7 @@
     "capacityAndServices": {
       "title": "Capacité & Services",
       "content": {
-        "capacity": "Il y a une capacité maximale de 20 personnes pour la salle privée et 25 personnes pour la terrasse sur le toit.",
+        "capacity": "La salle privée a une capacité minimale de 10 personnes et maximale de 20 personnes, et la terrasse sur le toit a une capacité maximale de 25 personnes.",
         "terrace": "La terrasse est chauffée, couverte, avec des rideaux sur mesure.",
         "services": "Deux services distincts :",
         "service1": "1er service : 17h30 à 20h00 (la table doit être libérée à 20h00)",
@@ -70,11 +70,11 @@
       ],
       "groupSize": "Taille du groupe * (minimum 7)",
       "spacePreference": "Espace souhaité *",
-      "spaceOptions": [
-        "Salle privée",
-        "Terrasse sur le toit",
-        "Aucune préférence"
-      ],
+      "spaceOptions": {
+        "rooftop_terrace": "Terrasse sur le toit",
+        "private_room": "Salle privée",
+        "no_preference": "Aucune préférence"
+      },
       "menuChoice": "Choix du menu *",
       "menuOptions": [
         "Option 1",

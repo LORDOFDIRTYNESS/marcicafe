@@ -72,6 +72,14 @@ app.post('/api/mail', mailLimiter, async (req, res) => {
         details
     } = req.body;
 
+    const ROOM_LABELS = {
+        rooftop_terrace: 'Rooftop terrace (max 25)',
+        private_room: 'Private room (min 10 — max 20)',
+        no_preference: 'No preference'
+    };
+
+    const selectedRoomLabel = ROOM_LABELS[selectedRoom] || selectedRoom || '—';
+
     try {
         await transporter.sendMail({
             from: '"Marci Group Reservation Form" <simoncote.web@gmail.com>',
@@ -88,7 +96,7 @@ app.post('/api/mail', mailLimiter, async (req, res) => {
           <p><strong>Date:</strong> ${new Intl.DateTimeFormat('en-GB', { day: '2-digit', month: 'long', year: 'numeric' }).format(new Date(date))}</p>
           <p><strong>Event Type:</strong> ${eventType}</p>
           <p><strong>Selected Service:</strong> ${selectedService}</p>
-          <p><strong>Selected Room:</strong> ${selectedRoom}</p>
+          <p><strong>Selected Room:</strong> ${selectedRoomLabel}</p>
           <p><strong>Selected Menu:</strong> ${selectedMenu}</p>
           <p><strong>Allergies:</strong> ${
                 allergies?.length ? allergies.join(', ') : 'None'
@@ -100,6 +108,7 @@ app.post('/api/mail', mailLimiter, async (req, res) => {
       `,
         });
         res.status(200).json({ message: 'Email sent successfully' });
+        console.log(selectedRoomLabel);
     } catch (err) {
         console.error('Email error:', err);
         res.status(500).json({ message: 'Failed to send email' });

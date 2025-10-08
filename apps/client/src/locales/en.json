@@ -5,7 +5,7 @@
     "capacityAndServices": {
       "title": "Capacity & Services",
       "content": {
-        "capacity": "There is a maximum capacity of 20 people for the private room and 25 people for the rooftop terrace.",
+        "capacity": "The private room has a minimum capacity of 10 people and a maximum capacity of 20 people, and the rooftop terrace has a maximum capacity of 25 people.",
         "terrace": "The terrace is heated, covered, and equipped with custom curtains.",
         "services": "Two distinct seatings:",
         "service1": "1st seating: 5:30 PM to 8:00 PM (table must be vacated by 8:00 PM)",
@@ -71,7 +71,11 @@
       ],
       "groupSize": "Group size * (minimum 7)",
       "spacePreference": "Preferred space *",
-      "spaceOptions": ["Private room", "Rooftop terrace", "No preference"],
+      "spaceOptions": {
+        "rooftop_terrace": "Terrace",
+        "private_room": "Private room",
+        "no_preference": "No preference"
+      },
       "menuChoice": "Menu choice *",
       "menuOptions": ["Option 1", "Option 2", "Option 3"],
       "allergies": "Allergies or dietary restrictions (please specify)",

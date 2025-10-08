@@ -78,7 +78,6 @@ const v$ = useVuelidate(rules, form)
 
 async function submitReservation() {
   v$.value.$touch()
-  console.log(form)
 
   if (v$.value.$invalid) {
     toast.error(t('toasts.error_fields'))
@@ -111,6 +110,7 @@ async function submitReservation() {
       allergies: [],
       details: '',
     })
+    console.log(payload.selectedRoom);
     v$.value.$reset()
     emit('resetAcknowledgement')
   } catch (error) {
