@@ -9,7 +9,7 @@ const messages = {
             capacityAndServices: {
                 title: "Capacity & Services",
                 content: {
-                    capacity: "There is a maximum capacity of 20 people for the private room and 25 people for the rooftop terrace.",
+                    capacity: "The private room has a minimum capacity of 10 people and a maximum capacity of 20 people, and the rooftop terrace has a maximum capacity of 25 people.",
                     terrace: "The terrace is heated, covered, and equipped with custom curtains.",
                     services: "Two distinct seatings:",
                     service1: "1st seating: 5:30 PM to 8:00 PM (table must be vacated by 8:00 PM)",
@@ -205,7 +205,7 @@ const messages = {
             capacityAndServices: {
                 title: "Capacité & Services",
                 content: {
-                    capacity : "Il y a une capacité maximale de 20 personnes pour la salle privée et 25 personnes pour la terrasse sur le toit.",
+                    capacity : "La salle privée a une capacité minimale de 10 personnes et maximale de 20 personnes, et la terrasse sur le toit a une capacité maximale de 25 personnes.",
                     terrace: "La terrasse est chauffée, couverte, avec des rideaux sur mesure.",
                     services: "Deux services distincts :",
                     service1: "1er service : 17h30 à 20h00 (la table doit être libérée à 20h00)",
